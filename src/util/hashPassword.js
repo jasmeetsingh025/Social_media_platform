@@ -1,5 +1,5 @@
 import bcrypt from "bcrypt";
-import ApplicationError from "../ErrorHandler/errorHandler";
+import ApplicationError from "../ErrorHandler/errorHandler.js";
 
 export const hashPassword = async (password, next) => {
   try {

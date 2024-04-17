@@ -16,3 +16,9 @@ router.route("/signin").post((req, res, next) => {
 router.route("/signout").get((req, res, next) => {
   userController.signOutUser(req, res, next);
 });
+
+router.route("/updatePassword").post((req, res, next) => {
+  userController.updatePassword(req, res, next);
+});
+
+export default router;

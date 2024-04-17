@@ -34,6 +34,9 @@ export const userSchema = new mongoose.Schema({
     },
   },
   bio: String,
-  createdAt: new Date().toLocaleDateString,
+  createdAt: {
+    type: String,
+    default: () => new Date().toLocaleDateString(),
+  },
   //   updatedAt: new Date().toLocaleDateString,
 });
