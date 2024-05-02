@@ -39,4 +39,16 @@ export const userSchema = new mongoose.Schema({
     default: () => new Date().toLocaleDateString(),
   },
   //   updatedAt: new Date().toLocaleDateString,
+  isLoggedIn: {
+    type: Boolean,
+    default: false,
+  },
+  friends: {
+    type: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Friends",
+      },
+    ],
+  },
 });

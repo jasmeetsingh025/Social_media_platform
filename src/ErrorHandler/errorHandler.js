@@ -13,5 +13,4 @@ export const appLvlErrorHandler = (err, req, res, next) => {
     success: false,
     error: err.message,
   });
-  next();
 };
